@@ -1,1 +1,6 @@
-# data-analyst-portfolio
+
+DATA CLEANING 
+Tools: MySQL
+Objectives: 
+  - pipipi
+  - popopo
