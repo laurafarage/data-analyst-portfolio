@@ -44,10 +44,6 @@ ___________________________________________
 
 df['Name'] = df['Name'].str.title()
 
-___________________________________________
-
-#Salvar o DataFrame transformado de volta para um arquivo CSV (opcional)
-
 df.to_csv('healthcare_dataset1.csv', index=False)
 
 ___________________________________________
@@ -67,11 +63,6 @@ ___________________________________________
 labels = [f'{i}-{i+14}' for i in bins[:-1]]
 
 df['Age Group'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
-
-___________________________________________
-
-
-#Salvar o DataFrame transformado de volta para um arquivo CSV
 
 df.to_csv('healthcare_dataset1.csv', index=False)
 
