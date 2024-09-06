@@ -101,7 +101,8 @@ df['Tempo de Internação'] = df['Discharge Date'] - df['Date of Admission']
 ___________________________________________
 
 Como ficou o dataframe:
-![image](https://github.com/user-attachments/assets/da5d9640-276d-48c8-b3c8-3fed9b2fb927)
+![image](https://github.com/user-attachments/assets/e1bbd58f-ce82-42ae-95c7-1bf6b745b526)
+
 
 
 # 3) DATA VISUALIZATION
