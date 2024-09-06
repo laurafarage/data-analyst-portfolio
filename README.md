@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/e9c8204a-aed3-48f3-9786-c9382e9d9492)INTRODUCTION
-
 Welcome to my data analyst portfolio, showcasing diverse projects in diffent areas. Each project highlights my skills in data cleaning, analysis, and visualization. Explore to see how I transform data into actionable insights across various domains.
 
 
