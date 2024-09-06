@@ -28,39 +28,52 @@ from datetime import datetime
 
 
 #Importar e ler o dataframe
+
 df = pd.read_csv('healthcare_dataset.csv')
 print(df.dtypes)
 
 #Aplicar a transformação na coluna 'Name'
+
 df['Name'] = df['Name'].str.title()
 
 #Salvar o DataFrame transformado de volta para um arquivo CSV (opcional)
+
 df.to_csv('healthcare_dataset1.csv', index=False)
 
 
 #Código para separar as idades em grupos
 
 #Definir os grupos de idade
+
 bins = range(0, 105, 15) 
 
 #Definir os rótulos para os grupos
+
 labels = [f'{i}-{i+14}' for i in bins[:-1]]
+
 df['Age Group'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
 
 #Salvar o DataFrame transformado de volta para um arquivo CSV
+
 df.to_csv('healthcare_dataset1.csv', index=False)
 
 #Distribuição de frequência da condição médica
+
 #Contar a frequência de cada valor único na coluna 'Medical Condition'
+
 freq_distribution = df['Medical Condition'].value_counts().sort_index()
 
 #Exibir a distribuição de frequência
+
 print(freq_distribution)
+
 ![image](https://github.com/user-attachments/assets/54b59d05-f9a2-410b-988a-268806e26931)
 
 
 #Converter a coluna para datetime, ignorando erros
+
 df['Date of Admission'] = pd.to_datetime(df['Date of Admission'], errors='coerce')
+
 df['Discharge Date'] = pd.to_datetime(df['Discharge Date'], errors='coerce')
 
 #Definindo a coluna Tempo de Internação
