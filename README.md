@@ -22,15 +22,20 @@ Como estava o dataframe:
 #Imports
 
 import pandas as pd
+
 import math as mt
+
 import statistics as st
+
 from datetime import datetime
+
 
 ___________________________________________
 
 #Importar e ler o dataframe
 
 df = pd.read_csv('healthcare_dataset.csv')
+
 print(df.dtypes)
 
 ___________________________________________
