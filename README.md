@@ -83,6 +83,7 @@ ___________________________________________
 
 
 #Converter a coluna para datetime, ignorando erros
+
 df['Date of Admission'] = pd.to_datetime(df['Date of Admission'], errors='coerce')
 df['Discharge Date'] = pd.to_datetime(df['Discharge Date'], errors='coerce')
 
