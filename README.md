@@ -26,19 +26,26 @@ import math as mt
 import statistics as st
 from datetime import datetime
 
+___________________________________________
 
 #Importar e ler o dataframe
 
 df = pd.read_csv('healthcare_dataset.csv')
 print(df.dtypes)
 
+___________________________________________
+
 #Aplicar a transformação na coluna 'Name'
 
 df['Name'] = df['Name'].str.title()
 
+___________________________________________
+
 #Salvar o DataFrame transformado de volta para um arquivo CSV (opcional)
 
 df.to_csv('healthcare_dataset1.csv', index=False)
+
+___________________________________________
 
 
 #Código para separar as idades em grupos
@@ -47,15 +54,25 @@ df.to_csv('healthcare_dataset1.csv', index=False)
 
 bins = range(0, 105, 15) 
 
+___________________________________________
+
+
 #Definir os rótulos para os grupos
 
 labels = [f'{i}-{i+14}' for i in bins[:-1]]
 
 df['Age Group'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
 
+___________________________________________
+
+
 #Salvar o DataFrame transformado de volta para um arquivo CSV
 
 df.to_csv('healthcare_dataset1.csv', index=False)
+
+
+___________________________________________
+
 
 #Distribuição de frequência da condição médica
 
@@ -63,11 +80,16 @@ df.to_csv('healthcare_dataset1.csv', index=False)
 
 freq_distribution = df['Medical Condition'].value_counts().sort_index()
 
+___________________________________________
+
+
 #Exibir a distribuição de frequência
 
 print(freq_distribution)
 
 ![image](https://github.com/user-attachments/assets/54b59d05-f9a2-410b-988a-268806e26931)
+
+___________________________________________
 
 
 #Converter a coluna para datetime, ignorando erros
@@ -79,6 +101,8 @@ df['Discharge Date'] = pd.to_datetime(df['Discharge Date'], errors='coerce')
 #Definindo a coluna Tempo de Internação
 
 df['Tempo de Internação'] = df['Discharge Date'] - df['Date of Admission']
+
+___________________________________________
 
 Como ficou o dataframe:
 ![image](https://github.com/user-attachments/assets/da5d9640-276d-48c8-b3c8-3fed9b2fb927)
