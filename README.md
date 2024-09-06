@@ -85,17 +85,20 @@ ___________________________________________
 #Converter a coluna para datetime, ignorando erros
 
 df['Date of Admission'] = pd.to_datetime(df['Date of Admission'], errors='coerce')
+
 df['Discharge Date'] = pd.to_datetime(df['Discharge Date'], errors='coerce')
 
 #Definindo a coluna Tempo de Internação
 
 df['Tempo de Internação'] = df['Discharge Date'] - df['Date of Admission']
+
 df.to_csv('healthcare_dataset1.csv', index=False)
-df.head()
+
 
 #Mudando os formatos de data para dd/mm/aa
 
 df['Date of Admission'] = df['Date of Admission'].dt.strftime('%d/%m/%y')
+
 df['Discharge Date'] = df['Discharge Date'].dt.strftime('%d/%m/%y')
 
 df.to_csv('healthcare_dataset1.csv', index=False)
