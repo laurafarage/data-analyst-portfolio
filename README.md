@@ -55,9 +55,6 @@ ___________________________________________
 
 bins = range(0, 105, 15) 
 
-___________________________________________
-
-
 #Definir os rótulos para os grupos
 
 labels = [f'{i}-{i+14}' for i in bins[:-1]]
@@ -75,9 +72,6 @@ ___________________________________________
 #Contar a frequência de cada valor único na coluna 'Medical Condition'
 
 freq_distribution = df['Medical Condition'].value_counts().sort_index()
-
-___________________________________________
-
 
 #Exibir a distribuição de frequência
 
