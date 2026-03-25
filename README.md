@@ -14,10 +14,10 @@ In this project, we will embark on a comprehensive journey through a healthcare 
 
 Tools: Python - Google Colab
 
-Como estava o dataframe:
+The dataframe:
 ![image](https://github.com/user-attachments/assets/7b0065b1-3e2e-46b7-add0-472b09e0d83d)
 
-##CÓDIGO##
+##CODE##
 
 #Imports
 
