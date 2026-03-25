@@ -110,9 +110,4 @@ Como ficou o dataframe:
 
 
 
-
-# 3) DATA VISUALIZATION
-
-Tools:
-
 Objectives:
