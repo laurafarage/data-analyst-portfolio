@@ -107,7 +107,3 @@ ___________________________________________
 
 Como ficou o dataframe:
 ![image](https://github.com/user-attachments/assets/65141850-f736-4559-be18-6a082f382710)
-
-
-
-Objectives:
